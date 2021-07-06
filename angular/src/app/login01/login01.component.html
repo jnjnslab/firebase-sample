@@ -1,0 +1,9 @@
+<div *ngIf="auth.user | async as user">
+    <h1>Hello {{ user.email }}!</h1>
+</div>
+<div>
+    user: <input [(ngModel)]="user" />
+    password: <input [(ngModel)]="pass" />
+    <button (click)="login()">Login</button>
+    <button (click)="logout()">Logout</button>
+</div>

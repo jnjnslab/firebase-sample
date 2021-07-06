@@ -1,0 +1,7 @@
+<div>
+    <input type="file" (change)="uploadFile($event)">
+</div>
+<div>
+    <img [src]="profileUrl | async" />
+    <button (click)="downloadFile()">Download</button>
+</div>

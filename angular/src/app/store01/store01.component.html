@@ -1,0 +1,18 @@
+<div>
+    name: <input [(ngModel)]="newName" />
+    age: <input [(ngModel)]="newAge" />
+    <button (click)="addItem()">Add</button>
+</div>
+<hr />
+<div>
+    name: <input [(ngModel)]="updateName" />
+    age: <input [(ngModel)]="updateAge" />
+    <button (click)="updateItem()">Update</button>
+</div>
+<hr />
+<ul>
+    <li *ngFor="let item of items | async">
+      {{ item.name }} / {{ item.age }} / {{ item.id }} / <button (click)="deleteItem(item.id)">Delete</button>
+      / <button (click)="editItem(item)">Edit</button>
+    </li>
+</ul>
